@@ -1,0 +1,20 @@
+@startuml
+title CTAP2
+
+node "Platform(Windows10,Mac,iOS,Android)" {
+    frame "Browser(Chrome,Edge,Firefox,Safari)" {
+        package "UserProgram(JS)" {
+            component "WebAuthn\n - navigator.credentials()\n - navigator.get()" as WebAuthn
+        }
+    }
+}   
+
+component "FIDO2 Authenticator(USB)" as FIDOKeyUSB
+component "FIDO2 Authenticator(NFC)" as FIDOKeyNFC
+component "FIDO2 Authenticator(BLE)" as FIDOKeyBLE
+
+WebAuthn ..> FIDOKeyUSB:**CTAP2** \n**USB Protocol**
+WebAuthn ..> FIDOKeyNFC:**CTAP2** \n**NFC Protocol**
+WebAuthn ..> FIDOKeyBLE:**CTAP2** \n**BLE Protocol**
+
+@enduml
