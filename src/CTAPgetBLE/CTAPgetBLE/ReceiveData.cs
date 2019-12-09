@@ -8,12 +8,12 @@ namespace CTAPgetBLE
 {
     public class ReceiveData
     {
-        private int dataSize=0;
-        private List<byte> cbor;
+        private int needSize=0;
+        private List<byte> cborbyte;
 
         public ReceiveData(byte[] data)
         {
-            cbor = new List<byte>();
+            cborbyte = new List<byte>();
 
             // [1] HLEN
             // [2] LLEN
@@ -22,7 +22,7 @@ namespace CTAPgetBLE
                 len[0] = data[2];
                 len[1] = data[1];
 
-                dataSize = BitConverter.ToInt16(len, 0) - 1;
+                needSize = BitConverter.ToInt16(len, 0) - 1;
             }
 
             // [3-] DATA
@@ -30,7 +30,7 @@ namespace CTAPgetBLE
             // 最初の1byteは応答ステータスで2byteからCBORデータ
             var tmp = buff.Skip(1).Take(buff.Length).ToArray();
             // 受信バッファに追加
-            cbor.AddRange(tmp.ToList());
+            cborbyte.AddRange(tmp.ToList());
         }
         
         public void Add(byte[] data)
@@ -38,16 +38,31 @@ namespace CTAPgetBLE
             // 最初の1byteは応答ステータスで2byteからCBORデータ
             var tmp = data.Skip(1).Take(data.Length).ToArray();
             // 受信バッファに追加
-            cbor.AddRange(tmp.ToList());
+            cborbyte.AddRange(tmp.ToList());
         }
 
         public bool IsReceiveComplete()
         {
-            if (cbor.Count == dataSize) {
+            if( needSize <= 0 || cborbyte.Count <= 0) {
+                return false;
+            }
+            if (cborbyte.Count == needSize) {
                 return true;
             } else {
                 return false;
             }
         }
+
+        public byte[] Get()
+        {
+            return (this.cborbyte.ToArray());
+        }
+
+        public void Clear()
+        {
+            this.needSize = 0;
+            cborbyte = new List<byte>();
+        }
+
     }
 }
