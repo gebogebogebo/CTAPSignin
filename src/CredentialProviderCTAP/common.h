@@ -53,36 +53,18 @@ static const FIELD_STATE_PAIR s_rgFieldStatePairs[] =
 {
     { CPFS_DISPLAY_IN_BOTH,            CPFIS_NONE    },    // SFI_TILEIMAGE
     { CPFS_HIDDEN,                     CPFIS_NONE    },    // SFI_LABEL
-    { CPFS_DISPLAY_IN_BOTH,            CPFIS_NONE    },    // SFI_LARGE_TEXT
+    { CPFS_HIDDEN,                     CPFIS_NONE    },    // SFI_LARGE_TEXT
     { CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_FOCUSED },    // SFI_PASSWORD
     { CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_SUBMIT_BUTTON
     { CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_LAUNCHWINDOW_LINK
-    { CPFS_HIDDEN,   CPFIS_NONE    },    // SFI_HIDECONTROLS_LINK
-    { CPFS_HIDDEN,   CPFIS_NONE    },    // SFI_FULLNAME_TEXT
-    { CPFS_HIDDEN,   CPFIS_NONE    },    // SFI_DISPLAYNAME_TEXT
-    { CPFS_HIDDEN,   CPFIS_NONE    },    // SFI_LOGONSTATUS_TEXT
-    { CPFS_HIDDEN,   CPFIS_NONE    },    // SFI_CHECKBOX
+    { CPFS_HIDDEN,                     CPFIS_NONE    },    // SFI_HIDECONTROLS_LINK
+    { CPFS_HIDDEN,                     CPFIS_NONE    },    // SFI_FULLNAME_TEXT
+    { CPFS_HIDDEN,                     CPFIS_NONE    },    // SFI_DISPLAYNAME_TEXT
+    { CPFS_HIDDEN,                     CPFIS_NONE    },    // SFI_LOGONSTATUS_TEXT
+    { CPFS_HIDDEN,                     CPFIS_NONE    },    // SFI_CHECKBOX
     { CPFS_HIDDEN,					   CPFIS_NONE    },    // SFI_EDIT_TEXT
     { CPFS_HIDDEN,					   CPFIS_NONE    },    // SFI_COMBOBOX
 };
-/*
-static const FIELD_STATE_PAIR s_rgFieldStatePairs[] =
-{
-	{ CPFS_DISPLAY_IN_BOTH,            CPFIS_NONE    },    // SFI_TILEIMAGE
-	{ CPFS_HIDDEN,                     CPFIS_NONE    },    // SFI_LABEL
-	{ CPFS_DISPLAY_IN_BOTH,            CPFIS_NONE    },    // SFI_LARGE_TEXT
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_FOCUSED },    // SFI_PASSWORD
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_SUBMIT_BUTTON
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_LAUNCHWINDOW_LINK
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_HIDECONTROLS_LINK
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_FULLNAME_TEXT
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_DISPLAYNAME_TEXT
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_LOGONSTATUS_TEXT
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_CHECKBOX
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_EDIT_TEXT
-	{ CPFS_DISPLAY_IN_SELECTED_TILE,   CPFIS_NONE    },    // SFI_COMBOBOX
-};
-*/
 
 // Field descriptors for unlock and logon.
 // The first field is the index of the field.
@@ -95,7 +77,7 @@ static const CREDENTIAL_PROVIDER_FIELD_DESCRIPTOR s_rgCredProvFieldDescriptors[]
     { SFI_LARGE_TEXT,        CPFT_LARGE_TEXT,    L"FIDO Key Sign-in"                                 },
     { SFI_PASSWORD,          CPFT_PASSWORD_TEXT, L"Password"                                              },
     { SFI_SUBMIT_BUTTON,     CPFT_SUBMIT_BUTTON, L"Submit"                                                     },
-    { SFI_LAUNCHWINDOW_LINK, CPFT_COMMAND_LINK,  L"Authenticate"                                       },
+    { SFI_LAUNCHWINDOW_LINK, CPFT_COMMAND_LINK,  L"FIDO Key Sign-in"                                       },
     { SFI_HIDECONTROLS_LINK, CPFT_COMMAND_LINK,  L"Hide additional controls"                                   },
     { SFI_FULLNAME_TEXT,     CPFT_SMALL_TEXT,    L"Full name: "                                                },
     { SFI_DISPLAYNAME_TEXT,  CPFT_SMALL_TEXT,    L"Display name: "                                             },

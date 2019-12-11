@@ -10,14 +10,14 @@
         <Grid Height="76" VerticalAlignment="Top" Width="295" Margin="0,0,-0.333,0">
             <StackPanel >
                 <TextBlock x:Name="textTitle" Margin="0,0,0.0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" TextAlignment="Center" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="textMessage1" Margin="0,5,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="19" TextAlignment="Center" />
+                <TextBlock x:Name="textMessage1" Margin="0,5,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="21" TextAlignment="Center" FontSize="16" />
                 <TextBlock x:Name="textMessage3" Margin="0,0,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="19" TextAlignment="Center" />
             </StackPanel>
         </Grid>
 
         <PasswordBox x:Name="textPIN" HorizontalAlignment="Center" Margin="0,0,0,54" VerticalAlignment="Bottom" Width="146" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Button x:Name="buttonLogin" Content="→" HorizontalAlignment="Right" Margin="0,0,51.667,54" VerticalAlignment="Bottom" Width="30" Height="30" FontSize="20" Foreground="#FF454D66" Click="buttonLogin_Click" />
-        <Image x:Name="imageAuthenticator" HorizontalAlignment="Center" Height="80" Margin="108,90,106.667,102" VerticalAlignment="Center" Width="80" Source="Image/beacon_denpa_hasshinki.png" Stretch="Fill" RenderTransformOrigin="0.39,0.589" />
+        <Image x:Name="imageAuthenticator" HorizontalAlignment="Center" Height="80" Margin="0,90,0,102" VerticalAlignment="Center" Width="80" Source="Image/beacon_denpa_hasshinki.png" Stretch="Fill" RenderTransformOrigin="0.39,0.589" />
         <RadioButton x:Name="radioPIN" Content="PIN" HorizontalAlignment="Left" Height="16" Margin="242,90,0,0" VerticalAlignment="Top" Width="50" IsChecked="True" Checked="RadioButtonPIN_Checked" RenderTransformOrigin="1.81,-0.611" Visibility="Hidden">
             <RadioButton.LayoutTransform>
                 <ScaleTransform ScaleX="1.0" ScaleY="1.0"/>
@@ -31,7 +31,7 @@
         <Grid Height="39" Margin="0,223,0,0" VerticalAlignment="Bottom" Width="290">
             <TextBlock x:Name="textMessage2" Margin="5" TextWrapping="Wrap" Text="---" TextAlignment="Center" FontSize="9" />
         </Grid>
-        <Image x:Name="imageUV" HorizontalAlignment="Left" Height="60" Margin="118,173,0,0" VerticalAlignment="Top" Width="60" Source="Image/mark_shimon.png"/>
+        <Image x:Name="imageUV" HorizontalAlignment="Center" Height="60" Margin="0,173,0,0" VerticalAlignment="Top" Width="60" Source="Image/mark_shimon.png"/>
 
     </Grid>
 </Window>

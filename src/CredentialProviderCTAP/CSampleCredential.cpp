@@ -120,7 +120,7 @@ HRESULT CSampleCredential::Initialize(CREDENTIAL_PROVIDER_USAGE_SCENARIO cpus,
     }
     if (SUCCEEDED(hr))
     {
-        hr = SHStrDupW(L"Authenticate", &_rgFieldStrings[SFI_LAUNCHWINDOW_LINK]);
+        hr = SHStrDupW(L"FIDO Key Sign-in", &_rgFieldStrings[SFI_LAUNCHWINDOW_LINK]);
     }
     if (SUCCEEDED(hr))
     {

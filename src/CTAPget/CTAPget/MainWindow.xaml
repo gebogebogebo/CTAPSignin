@@ -10,7 +10,7 @@
         <Grid Height="76" VerticalAlignment="Top" Width="295" Margin="0,0,-0.333,0">
             <StackPanel >
                 <TextBlock x:Name="textTitle" Margin="0,0,0.0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" TextAlignment="Center" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="textMessage1" Margin="0,5,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="19" TextAlignment="Center" />
+                <TextBlock x:Name="textMessage1" Margin="0,5,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="21" TextAlignment="Center" FontSize="16" />
                 <TextBlock x:Name="textMessage3" Margin="0,0,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="19" TextAlignment="Center" />
             </StackPanel>
         </Grid>
